@@ -3,13 +3,12 @@ const router = require('./route/router')
 const cors = require('cors')
 
 const app = express()
-const port = 8000
-const host = process.env.NODE_ENV !== 'production' ? 'localhost' : '0.0.0.0'
+const port = process.env.PORT || 8000
 
 app.use(cors({ origin: 'null' }))
 app.use(express.json())
 app.use(router)
 
-app.listen(port,host, () => {
-    console.log('Server is up on port ' + host+ port)
+app.listen(port, () => {
+    console.log('Server is up on port '+ port)
 })

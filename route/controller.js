@@ -10,6 +10,11 @@ const {
   const { sign } = require("jsonwebtoken");
   
   module.exports = {
+    checkEndpoint: (req, res) => {
+      res.json({
+        status: "API is running"
+      })
+    },
     createUser: (req, res) => {
       const body = req.body;
       const salt = genSaltSync(10);
