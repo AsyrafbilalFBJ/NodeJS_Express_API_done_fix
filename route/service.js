@@ -2,11 +2,6 @@ const connection = require("../config/database");
 
 module.exports = {
   addUser: (data, callBack) => {
-    connection.getConnection((err, connection) => {
-      if (err) {
-        console.log(err);
-        return callback(err);
-      }
     connection.query(
       `insert into users(name, email, password) 
                 values(?,?,?)`,
@@ -21,7 +16,6 @@ module.exports = {
         }
         return callBack(null, results);
       }
-    )}
     );
   },
   getUserByUserEmail: (email, callBack) => {

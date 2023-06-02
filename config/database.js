@@ -6,11 +6,11 @@ const connection = mysql.createPool({
     user: 'root',
     password: '',
     database: 'nutrilife', //isi sesuai dengan nama database
-    authPlugins: {
-        mysql_native_password: () => ({ // Use mysql_native_password plugin
-          password: 'nutrilife',
-        }),
-      },
+    // authPlugins: {
+    //     mysql_native_password: () => ({ // Use mysql_native_password plugin
+    //       password: 'nutrilife',
+    //     }),
+    //   },
 })
 
 module.exports = connection

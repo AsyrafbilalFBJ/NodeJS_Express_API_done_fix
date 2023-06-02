@@ -17,8 +17,8 @@ const {
     },
     createUser: (req, res) => {
       const body = req.body;
-      const salt = genSaltSync(10);
-      body.password = hashSync(body.password, salt);
+      // const salt = genSaltSync(10);
+      // body.password = hashSync(body.password, salt);
       addUser(body, (err, results) => {
         if (err) {
           console.log(err);
@@ -47,8 +47,8 @@ const {
             data: "Invalid email or password"
           });
         }
-        const result = compareSync(body.password, results.password);
-        if (result) {
+        // const result = compareSync(body.password, results.password);
+        if (body.password == results.password) {
           results.password = undefined;
           const jsontoken = sign({ result: results }, "qwe1234", {
             expiresIn: "1h"
