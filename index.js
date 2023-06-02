@@ -7,7 +7,7 @@ const app = express()
 // const host = process.env.NODE_ENV !== 'production' ? 'localhost' : '0.0.0.0'
 
 const NODE_ENV = process.env.NODE_ENV || 'development'
-const HOST = process.env.HOST || '0.0.0.0'
+const HOST = process.env.NODE_ENV !== 'production' ? 'localhost' : '0.0.0.0'
 const PORT = process.env.PORT || 3000
 
 app.use(cors({ origin: 'null' }))
