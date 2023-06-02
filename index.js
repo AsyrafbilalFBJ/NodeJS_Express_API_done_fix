@@ -11,5 +11,5 @@ app.use(express.json())
 app.use(router)
 
 app.listen(port,host, () => {
-    console.log('Server is up on port ' + port)
+    console.log('Server is up on port ' + host+ port)
 })
