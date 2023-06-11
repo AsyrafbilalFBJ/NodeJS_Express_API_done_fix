@@ -1,13 +1,11 @@
 {
-    "name": "NodeJS_Express_API",
+    "name": "nodejs_express_api",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start-prod": "NODE_ENV=production node index.js",
-        "start-dev": "nodemon index.js",
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "serve": "nodemon server.js"
+        "start": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "Asyraf",
     "license": "ISC",
